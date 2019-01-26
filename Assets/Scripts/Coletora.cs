@@ -12,7 +12,7 @@ public class Coletora : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        vel = 1.5f;
+        vel = -1.5f;
         sR = GetComponent<SpriteRenderer>();
     }
 
@@ -32,7 +32,7 @@ public class Coletora : MonoBehaviour {
         {
             lado *= -1;
         }
-        if(abelinha.transform.localPosition.x > 340)
+        if(abelinha.transform.localPosition.x < 340)
         {
             abelinha.transform.localPosition += new Vector3(lado * vel, 0, 0);
         }
