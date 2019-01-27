@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ColetaPolem : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Text melPolinizacaoBG1, melPolinizacaoBG2, melPolinizacaoBG4;
+    public static int polem;
+
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -16,6 +21,10 @@ public class ColetaPolem : MonoBehaviour {
 
 
     public void onClick() {
-            SceneManager.polem +=1;
+        polem = SceneManager.polem +=1;
+        melPolinizacaoBG1.text = polem.ToString();
+        melPolinizacaoBG2.text = polem.ToString();
+        melPolinizacaoBG4.text = polem.ToString();
+
     }
 }
